@@ -1,0 +1,54 @@
+.btn {
+  &-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // width: 9rem; // Kalo mau panjang ganti width ini
+    border-radius: 0.5rem;
+    background-color: var(--clr-blue-400);
+    padding: 0.5rem 0.5rem;
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &-primary {
+    background-color: var(--clr-primary-100);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--clr-blue-1000);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+
+    cursor: pointer;
+    font-weight: var(--fw-semibold);
+
+    i {
+      font-size: var(--fs-600);
+    }
+
+    &--shadow {
+      box-shadow: 0 0.5rem 1rem 0.25rem
+        var(--clr-trans-primary-100);
+    }
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}

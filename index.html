@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- ===== FONTS ===== -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ===== BOXICON ==== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- ===== SWIPER.JS ===== -->
+  </head>
+  <body>
+    <!-- ======= NAV ======= -->
+    <nav class="mobile__nav">
+      <i class="bx bx-x mobile__nav-close"></i>
+      <ul class="nav-button">
+        <li class="nav-button__link">Collections</li>
+        <li class="nav-button__link">Men</li>
+        <li class="nav-button__link">Women</li>
+        <li class="nav-button__link">About</li>
+        <li class="nav-button__link">Contact</li>
+      </ul>
+    </nav>
+    <nav class="nav">
+      <div class="nav__content">
+        <ul class="nav-button">
+          <button class="nav__expand">
+            <i class="bx bx-menu"></i>
+          </button>
+          <li class="nav-button__logo">
+            <img src="images/logo.svg" alt="" />
+          </li>
+          <li class="nav-button__link">Collections</li>
+          <li class="nav-button__link">Men</li>
+          <li class="nav-button__link">Women</li>
+          <li class="nav-button__link">About</li>
+          <li class="nav-button__link">Contact</li>
+        </ul>
+        <div class="nav-profile">
+          <i
+            class="bx bx-cart-alt nav-profile__notif empty"
+          ></i>
+          <img
+            src="images/image-avatar.png"
+            alt=""
+            class="nav-profile__img"
+          />
+          <!-- ========= POPUP ========= -->
+          <div class="cart-popup-wrapper">
+            <article class="cart-popup hide-popup">
+              <h3
+                class="cart-popup__title title--tersiary u--margin-b-medium"
+              >
+                Cart
+              </h3>
+              <!-- ==== POPUP CONTENT ==== -->
+              <div class="cart-popup__content--empty">
+                Your cart is empty.
+              </div>
+              <div class="cart-popup__wrapper">
+                <!-- <div class="cart-popup__content">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+
+              <div class="cart-popup__content--info">
+                <h4 class="paragraph">
+                  Fall Limited Edition Sneakers
+                </h4>
+                <p class="paragraph">
+                  $125.00 x 3
+                  <span class="paragraph--bold"
+                    >$375.00</span
+                  >
+                </p>
+              </div>
+
+              <i class="bx bx-trash"></i>
+            </div> -->
+              </div>
+
+              <button
+                class="cart__submit btn btn-primary btn-small u--margin-t-medium cart-empty"
+              >
+                Checkout
+              </button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- ======= MAIN ======== -->
+    <article class="fullscreen-slider closed">
+      <div class="swiper-wrapper">
+        <i class="bx bx-x desktop-modal__exit"></i>
+        <div class="swiper-navigation">
+          <button class="swiper-navigation__button before">
+            <i class="bx bx-chevron-left"></i>
+          </button>
+          <button class="swiper-navigation__button next">
+            <i class="bx bx-chevron-right"></i>
+          </button>
+        </div>
+        <div class="swiper">
+          <div class="swiper__container">
+            <img
+              src="images/image-product-1.jpg"
+              alt=""
+              class="main-display__img main-display__img--1"
+            />
+            <img
+              src="images/image-product-2.jpg"
+              alt=""
+              class="main-display__img main-display__img--2"
+            />
+            <img
+              src="images/image-product-3.jpg"
+              alt=""
+              class="main-display__img main-display__img--3"
+            />
+            <img
+              src="images/image-product-4.jpg"
+              alt=""
+              class="main-display__img main-display__img--4"
+            />
+          </div>
+        </div>
+      </div>
+
+      <ul class="main-display__thumbnail">
+        <li
+          class="main-display__thumbnail-preview thumbnail-preview-selected"
+        >
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt=""
+          />
+        </li>
+        <li class="main-display__thumbnail-preview">
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt=""
+          />
+        </li>
+        <li class="main-display__thumbnail-preview">
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt=""
+          />
+        </li>
+        <li class="main-display__thumbnail-preview">
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+    </article>
+    <main class="main section__center">
+      <article>
+        <div class="swiper-wrapper">
+          <!-- === NAVIGATION === -->
+          <div class="swiper-navigation desktop">
+            <button
+              class="swiper-navigation__button before"
+            >
+              <i class="bx bx-chevron-left"></i>
+            </button>
+            <button class="swiper-navigation__button next">
+              <i class="bx bx-chevron-right"></i>
+            </button>
+          </div>
+          <!-- === NAVIGATION === -->
+          <div class="swiper not-fullscreen">
+            <div
+              class="swiper__container desktop-container"
+            >
+              <img
+                src="images/image-product-1.jpg"
+                alt=""
+                class="main-display__img main-display__img--1"
+              />
+              <img
+                src="images/image-product-2.jpg"
+                alt=""
+                class="main-display__img main-display__img--2"
+              />
+              <img
+                src="images/image-product-3.jpg"
+                alt=""
+                class="main-display__img main-display__img--3"
+              />
+              <img
+                src="images/image-product-4.jpg"
+                alt=""
+                class="main-display__img main-display__img--4"
+              />
+            </div>
+          </div>
+        </div>
+
+        <ul class="main-display__thumbnail">
+          <li
+            class="main-display__thumbnail-preview thumbnail-preview-selected"
+          >
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt=""
+            />
+          </li>
+          <li class="main-display__thumbnail-preview">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt=""
+            />
+          </li>
+          <li class="main-display__thumbnail-preview">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt=""
+            />
+          </li>
+          <li class="main-display__thumbnail-preview">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt=""
+            />
+          </li>
+        </ul>
+      </article>
+      <div class="main__cart">
+        <p class="title--heading u--margin-b-medium">
+          SNEAKER COMPANY
+        </p>
+        <h1
+          class="title--primary u--margin-b-large main__title"
+        >
+          Fall Limited Edition Sneakers
+        </h1>
+        <p class="paragraph">
+          These low-profile sneakers are your perfect casual
+          wear companion. Featuring a durable rubber outer
+          sole, they’ll withstand everything the weather can
+          offer.
+        </p>
+        <div class="cart-price">
+          <p
+            class="cart-price__shown title--secondary u--margin-t-medium"
+          >
+            $125.00
+          </p>
+          <p
+            class="cart-price__previous paragraph paragraph--bold"
+          >
+            $250.00
+          </p>
+        </div>
+        <div class="cart-add u--margin-t-large">
+          <div class="btn-amount">
+            <div
+              class="btn-amount__icon btn-amount__icon--minus"
+            >
+              <img src="images/icon-minus.svg" alt="" />
+            </div>
+
+            <p class="btn-amount__counter paragraph--bold">
+              0
+            </p>
+            <div
+              class="btn-amount__icon btn-amount__icon--plus"
+            >
+              <img src="images/icon-plus.svg" alt="" />
+            </div>
+          </div>
+          <button
+            class="cart-add__submit btn btn-primary--shadow btn-primary"
+          >
+            <i class="bx bx-cart-alt"></i>
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <!-- ==== JS ==== -->
+  <script src="index.js"></script>
+  <script
+    src="https://kit.fontawesome.com/3b464485f8.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

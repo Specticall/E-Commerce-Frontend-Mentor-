@@ -1,0 +1,32 @@
+.title--primary {
+  font-size: var(--fs-1100);
+  font-weight: var(--fw-bold);
+  color: var(--clr-blue-100);
+}
+
+.title--secondary {
+  color: var(--clr-blue-100);
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bold);
+}
+
+.title--tersiary {
+  color: var(--clr-blue-100);
+}
+
+.title--heading {
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.1rem;
+  color: var(--clr-primary-100);
+}
+
+.paragraph--bold {
+  font-weight: var(--fw-bold);
+}
+
+.paragraph {
+  color: var(--clr-blue-200);
+  letter-spacing: 0.025rem;
+  font-size: var(--fs-450);
+  line-height: 1.5;
+}

@@ -1,0 +1,54 @@
+:root {
+  /* === COLOR === */
+  --clr-blue-100: hsl(220, 13%, 13%);
+  --clr-blue-200: hsl(219, 9%, 45%);
+  --clr-blue-300: hsl(220, 14%, 75%);
+  --clr-blue-400: hsl(223, 64%, 98%);
+  --clr-blue-1000: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+
+  --clr-primary-100: hsl(26, 100%, 55%);
+  --clr-trans-primary-100: hsla(26, 100%, 55%, 0.2);
+  $clr-primary-100: hsl(26, 100%, 55%);
+  --clr-primary-200: hsl(25, 100%, 94%);
+
+  /* === ANIMATION ===  */
+  --animation-primary: 0.5s cubic-bezier(0.3, 1, 0.3, 1);
+  --animation-nav: 0.5s cubic-bezier(0.6, 0, 0.4, 1);
+  --animation-smooth: 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+
+  /* === */
+
+  --font-family: "Kumbh Sans", sans-serif;
+
+  /* === FONT-SIZE === */
+  --fs-2000: 4.25rem;
+  --fs-1600: 3.75rem;
+  --fs-1300: 3rem;
+  --fs-1100: 2.5rem;
+  --fs-900: 2rem;
+  --fs-800: 1.75rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1.25rem;
+  --fs-550: 1.125rem;
+  --fs-500-default: 1rem;
+  --fs-450: 0.875rem;
+  --fs-400: 0.75rem;
+  --fs-350: 0.625rem;
+  --fs-300: 0.5rem;
+
+  // Font weights
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  //animations
+  --animation-primary: 0.5s cubic-bezier(0.3, 1, 0.3, 1);
+  --animation-nav: 0.5s cubic-bezier(0.6, 0, 0.4, 1);
+  --animation-smooth: 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+
+  // Popup Messages
+  --msg-add-to-cart: "aaaa";
+  --msg-notif-amount: "5";
+}

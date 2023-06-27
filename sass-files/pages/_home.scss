@@ -1,0 +1,44 @@
+.main {
+  padding-top: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  padding-bottom: 4rem;
+
+  max-width: 64rem;
+
+  article .swiper-wrapper {
+    position: relative;
+  }
+}
+
+@include max-width(tablet) {
+  .main {
+    flex-direction: column;
+    row-gap: 5rem;
+
+    &__cart {
+      padding-inline: 2rem;
+    }
+  }
+}
+
+@include max-width(tablet-small) {
+  .main {
+    padding-top: 6rem;
+    row-gap: 2rem;
+    padding-inline: 0rem;
+  }
+
+  &__cart {
+    padding-inline: 0rem;
+  }
+}
+
+@include max-width(phone) {
+  .main__title {
+    font-size: var(--fs-900);
+    margin-bottom: 1rem;
+  }
+}

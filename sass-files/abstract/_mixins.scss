@@ -1,0 +1,33 @@
+/*
+Tablet: 850px
+Tablet-small: 550px
+Phone:400px
+
+*/
+
+@mixin max-width($width) {
+  @if $width == tablet {
+    @media only screen and (max-width: 850px) {
+      @content;
+    }
+  }
+
+  @if $width == tablet-small {
+    @media only screen and (max-width: 550px) {
+      @content;
+    }
+  }
+
+  @if $width == phone {
+    @media only screen and (max-width: 400px) {
+      @content;
+    }
+  }
+}
+
+@mixin positionCenter {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}

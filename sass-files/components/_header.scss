@@ -1,0 +1,213 @@
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+
+  height: 6rem;
+  display: flex;
+  align-items: center;
+
+  background-color: var(--clr-blue-1000);
+  z-index: 100;
+
+  &__expand {
+    display: none;
+
+    border: none;
+    background: none;
+
+    cursor: pointer;
+
+    i {
+      font-size: var(--fs-700);
+    }
+
+    @include max-width(tablet) {
+      display: initial;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    width: 1024px;
+    height: 100%;
+    padding-inline: 2rem;
+
+    border-bottom: 1px solid var(--clr-blue-300);
+  }
+
+  &-button {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    color: var(--clr-blue-200);
+
+    &__logo {
+      margin-right: 1.5rem;
+    }
+
+    &__link {
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2.25rem;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--clr-primary-100);
+        opacity: 0;
+
+        transition: 0.1s;
+      }
+
+      &:hover {
+        color: var(--clr-blue-100);
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    position: relative;
+
+    &__img {
+      width: 3.5rem;
+      aspect-ratio: 1;
+      cursor: pointer;
+    }
+
+    @media screen and (min-width: 550px) {
+      &__img:hover {
+        outline: 2px solid var(--clr-primary-100);
+        outline-offset: 2px;
+        border-radius: 100%;
+      }
+    }
+
+    &__notif.empty::after {
+      display: none;
+    }
+
+    &__notif {
+      cursor: pointer;
+      font-size: var(--fs-700);
+      color: var(--clr-blue-300);
+      position: relative;
+    }
+
+    &__notif::after {
+      content: var(--msg-notif-amount);
+      font-family: var(--font-family);
+      position: absolute;
+      font-size: var(--fs-300);
+      background-color: var(--clr-primary-100);
+      color: var(--clr-blue-1000);
+      padding: 0.15rem 0.45rem;
+      border-radius: 0.75rem;
+      font-weight: var(--fw-bold);
+      top: -0.25rem;
+      left: 0.7rem;
+    }
+
+    &__notif:hover {
+      color: var(--clr-blue-100);
+    }
+  }
+
+  @include max-width(tablet) {
+    &-button__link:not(.nav-button__logo) {
+      display: none;
+    }
+  }
+
+  @include max-width(tablet-small) {
+    &__content {
+      padding-inline: 1.5rem;
+    }
+    &-profile {
+      gap: 1.25rem;
+
+      &__img {
+        width: 2.5rem;
+      }
+    }
+
+    &-button {
+      gap: 1rem;
+    }
+  }
+}
+
+.mobile__nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  transform: translateX(-100%);
+  border-radius: 100%;
+
+  transition: var(--animation-nav);
+
+  width: clamp(15rem, 50vw, 20rem);
+
+  background-color: var(--clr-blue-100);
+  z-index: 101;
+
+  .bx-x {
+    color: var(--clr-blue-1000);
+    padding-left: 2rem;
+    padding-top: 2rem;
+    cursor: pointer;
+    font-size: var(--fs-700);
+  }
+
+  .nav-button {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 5rem 0rem;
+    margin-top: 2rem;
+    width: 60%;
+    margin-inline: auto;
+    border-top: 1px solid var(--clr-blue-200);
+
+    li {
+      display: flex;
+      color: var(--clr-blue-300);
+      position: relative;
+      padding-left: 1rem;
+
+      &::before {
+        content: "";
+        width: 0.25rem;
+        height: 0.25rem;
+        background: var(--clr-blue-400);
+        position: absolute;
+        border-radius: 100%;
+        left: 0;
+        top: 50%;
+        transform: translate(0%, -50%);
+        z-index: 300;
+      }
+    }
+  }
+
+  &.opened {
+    transform: translateX(0%);
+    border-radius: 0%;
+  }
+}

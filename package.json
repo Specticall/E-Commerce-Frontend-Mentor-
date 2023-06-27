@@ -1,0 +1,16 @@
+{
+  "name": "e-commerce-product-page",
+  "version": "1.0.0",
+  "description": "![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass-files/main.scss index.css -w",
+    "devstart": "live-server",
+    "start": "npm-run-all --parallel watch:sass devstart"
+  },
+  "author": "Joseph",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
